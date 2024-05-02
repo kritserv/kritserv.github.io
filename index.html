@@ -13,32 +13,46 @@
 </head>
 
 <body>
+	<img id="switchCol" src="https://images.unsplash.com/photo-1530128118208-89f6ce02b37b">
 
-	<div class="container">
+	<div class="container nohighlight">
 
 		<!-- language switch -->
-		<span class="th font-cmm-r nohighlight">ไทย</span>
-		<input type="checkbox" class="check">
-		<span class="en font-cmm-r nohighlight">English</span>
+		<span class="th font-cmm-r">ไทย</span>
+		<input type="checkbox" class="check" onchange="changeCol()">
+		<span class="en font-cmm-r">English</span>
 
 		<!-- Thai -->
-		<div class="content contentThai font-cmm-b nohighlight">
+		<div class="content contentThai font-cmm-b">
 			<h1>ประวัติย่อ</h1>
-			<h1>แนะนำตัว</h1>
 			<h1>ผลงาน</h1>
 			<h1>ความสามารถ</h1>
 			<h1>ติดต่อ</h1>
 		</div>
 		
 		<!-- Eng -->
-		<div class="content contentEng font-cmm-b nohighlight">
+		<div class="content contentEng font-cmm-b">
 			<h1>RESUME</h1>
-			<h1>ABOUT</h1>
 			<h1>PROJECT</h1>
 			<h1>SKILL</h1>
 			<h1>CONTACT</h1>
 		</div>
 
 	</div>
+
+	<script type="text/javascript">
+		function changeCol() {
+			var img = document.getElementById("switchCol");
+			if (img.src == "https://images.unsplash.com/photo-1530128118208-89f6ce02b37b") {
+				img.src = "https://images.unsplash.com/photo-1489100517551-92a468b736f0";
+				document.body.style.backgroundColor = "black";
+				document.documentElement.style.backgroundColor = "black"
+			} else {
+				img.src = "https://images.unsplash.com/photo-1530128118208-89f6ce02b37b";
+				document.body.style.backgroundColor = "#25282c";
+				document.documentElement.style.backgroundColor = "#25282c"
+			}
+		}
+	</script>
 </body>
 </html>

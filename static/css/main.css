@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
 
 html, body {
-  background: black;
+  background: #25282c;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 .font-cmm-r {
@@ -16,14 +22,15 @@ html, body {
   font-style: normal;
 }
 
-body {
-  display: flex;
-  min-height: 100vh;
-  overflow: hidden;
+img {
+  width: 100%;
+  height: 80vh;
+  object-fit: cover;
 }
 
 .container {
-  position: relative;
+  position: absolute;
+  margin-top: 80vh;
   height: 500px;
   padding: 12px;
   color: grey;
@@ -33,8 +40,9 @@ body {
   display: none;
   margin-top: clamp(50px, 2vw, 100px);
   width: 100%;
-  font-size: clamp(15px, 2vw, 30px);
+  font-size: clamp(25px, 2vw, 30px);
   transition: .5s;
+  padding-bottom: 45vh;
 }
 
 .container .content.contentThai {
@@ -94,7 +102,7 @@ body {
 }
 
 h1 {
-  transition: 1.7s;
+  transition: 1.1s;
 }
 
 h1:hover {
