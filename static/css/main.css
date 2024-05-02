@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap');
+
+html, body {
+  background: black;
+}
+
+.font-cmm-r {
+  font-family: "Charmonman", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.font-cmm-b {
+  font-family: "Charmonman", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  position: relative;
+  height: 500px;
+  padding: 12px;
+  color: grey;
+}
+
+.container .content {
+  display: none;
+  margin-top: clamp(50px, 2vw, 100px);
+  width: 100%;
+  font-size: clamp(15px, 2vw, 30px);
+  transition: .5s;
+}
+
+.container .content.contentThai {
+  display: block;
+}
+
+.check {
+  position: relative;
+  width: 50px;
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 25px;
+  background: #ff0000;
+  border-radius: 25px;
+}
+
+.check:checked:before {
+  background: #00a1ff;
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  background: #fff;
+  border-radius: 25px;
+  transition: .5s;
+  border: 2px solid #ff0000;
+  box-sizing: border-box;
+}
+
+.check:checked:after {
+  left: 25px;
+  border: 2px solid #00a1ff;
+}
+
+.check:checked ~ .content.contentThai {
+  display: none;
+}
+
+.check:checked ~ .content.contentEng {
+  display: block;
+}
+
+.th, .en {
+  color :white;
+}
+
+.nohighlight {
+  user-select: none;
+}
+
+h1 {
+  transition: 1.7s;
+}
+
+h1:hover {
+  cursor: pointer;
+  transition: .3s;
+  text-decoration: underline;
+  margin-left: 45px;
+}
+
+.container .content.contentThai h1:hover {
+  color: #fff;
+}
+
+.container .content.contentEng h1:hover {
+  color: #00a1ff;
+}
