@@ -23,6 +23,8 @@
 		<input type="checkbox" class="check" onchange="changeColAndImg()">
 		<span class="en font-cmm-r">English</span>
 
+		<!-- Menu -->
+
 		<!-- Thai -->
 		<div class="content contentThai font-cmm-b">
 			<button class="menu" onclick="window.ประวัติย่อ.showModal();"><h1 class="font-cmm-b">ประวัติย่อ</h1></button><br>
@@ -44,30 +46,42 @@
 
 		<!-- Thai -->
 		<dialog id="ประวัติย่อ">
-			<h1 class="font-cmm-b">ประวัติย่อ</h1>
-			<button onclick="window.ประวัติย่อ.close()" aria-label="กลับ" class="x">x</button>
+			<div class="inside-dialog">
+				<h1 class="font-cmm-b">ประวัติย่อ</h1>
+				<button onclick="window.ประวัติย่อ.close()" aria-label="กลับ" class="x">x</button>
+			</div>
 		</dialog>
 		<dialog id="ผลงาน">
-			<h1 class="font-cmm-b">ผลงาน</h1>
-			<button onclick="window.ผลงาน.close()" aria-label="กลับ" class="x">x</button>
+			<div class="inside-dialog">
+				<h1 class="font-cmm-b">ผลงาน</h1>
+				<button onclick="window.ผลงาน.close()" aria-label="กลับ" class="x">x</button>
+			</div>
 		</dialog>
 		<dialog id="ความสามารถ">
-			<h1 class="font-cmm-b">ความสามารถ</h1>
-			<button onclick="window.ความสามารถ.close()" aria-label="กลับ" class="x">x</button>
+			<div class="inside-dialog">
+				<h1 class="font-cmm-b">ความสามารถ</h1>
+				<button onclick="window.ความสามารถ.close()" aria-label="กลับ" class="x">x</button>
+			</div>
 		</dialog>
 
 		<!-- Eng -->
 		<dialog id="Resume">
-			<h1 class="font-cmm-b">Resume</h1>
-			<button onclick="window.Resume.close()" aria-label="close" class="x">x</button>
+			<div class="inside-dialog">
+				<h1 class="font-cmm-b">Resume</h1>
+				<button onclick="window.Resume.close()" aria-label="close" class="x">x</button>
+			</div>
 		</dialog>
 		<dialog id="Project">
-			<h1 class="font-cmm-b">Project</h1>
-			<button onclick="window.Project.close()" aria-label="close" class="x">x</button>
+			<div class="inside-dialog">
+				<h1 class="font-cmm-b">Project</h1>
+				<button onclick="window.Project.close()" aria-label="close" class="x">x</button>
+			</div>
 		</dialog>
 		<dialog id="Skill">
-			<h1 class="font-cmm-b">Skill</h1>
-			<button onclick="window.Skill.close()" aria-label="close" class="x">x</button>
+			<div class="inside-dialog">
+				<h1 class="font-cmm-b">Skill</h1>
+				<button onclick="window.Skill.close()" aria-label="close" class="x">x</button>
+			</div>
 		</dialog>
 	</div>
 
