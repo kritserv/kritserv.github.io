@@ -73,7 +73,6 @@
   align-items: center;
   font-size: clamp(12px, 1.7vw, 10rem);
   transition: 1.1s;
-  background: #333;
   width: clamp(150px, 30vw, 500px);
 }
 
@@ -85,11 +84,13 @@
 }
 
 .container .content.contentThai .menu {
+  background: #111;
   color: white;
   border: 4px solid #25282c;
 }
 
 .container .content.contentEng .menu {
+  background: #222;
   color: white;
   border: 4px solid black;
 }
