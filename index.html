@@ -29,16 +29,16 @@
 
 		<!-- Thai -->
 		<div class="content contentThai font-cmm-b">
-			<button class="menu" onclick="window.ประวัติย่อ.showModal();"><h1 class="font-cmm-b">ประวัติย่อ</h1></button><br>
 			<button class="menu" onclick="window.ผลงาน.showModal();"><h1 class="font-cmm-b">ผลงาน</h1></button><br>
-			<button class="menu" onclick="window.ความสามารถ.showModal();"><h1 class="font-cmm-b">ความสามารถ</h1></button>
+			<button class="menu" onclick="window.ความสามารถ.showModal();"><h1 class="font-cmm-b">ความสามารถ</h1></button><br>
+			<button class="menu" onclick="window.ประวัติย่อ.showModal();"><h1 class="font-cmm-b">ประวัติย่อ</h1></button><br>
 		</div>
 		
 		<!-- Eng -->
 		<div class="content contentEng font-cmm-b">
-			<button class="menu" onclick="window.Resume.showModal();"><h1 class="font-cmm-b">RESUME</h1></button><br>
 			<button class="menu" onclick="window.Project.showModal();"><h1 class="font-cmm-b">PROJECT</h1></button><br>
-			<button class="menu" onclick="window.Skill.showModal();"><h1 class="font-cmm-b">SKILL</h1></button>
+			<button class="menu" onclick="window.Skill.showModal();"><h1 class="font-cmm-b">SKILL</h1></button><br>
+			<button class="menu" onclick="window.Resume.showModal();"><h1 class="font-cmm-b">RESUME</h1></button>
 		</div>
 
 	</div>
@@ -47,12 +47,6 @@
 		<!-- Dialog -->
 
 		<!-- Thai -->
-		<dialog id="ประวัติย่อ">
-			<div class="inside-dialog">
-				<h1 class="font-cmm-b">ประวัติย่อ</h1>
-				<button onclick="window.ประวัติย่อ.close()" aria-label="กลับ" class="x">x</button>
-			</div>
-		</dialog>
 		<dialog id="ผลงาน">
 			<div class="inside-dialog">
 				<h1 class="font-cmm-b">ผลงาน</h1>
@@ -65,14 +59,14 @@
 				<button onclick="window.ความสามารถ.close()" aria-label="กลับ" class="x">x</button>
 			</div>
 		</dialog>
-
-		<!-- Eng -->
-		<dialog id="Resume">
+		<dialog id="ประวัติย่อ">
 			<div class="inside-dialog">
-				<h1 class="font-cmm-b">Resume</h1>
-				<button onclick="window.Resume.close()" aria-label="close" class="x">x</button>
+				<h1 class="font-cmm-b">ประวัติย่อ</h1>
+				<button onclick="window.ประวัติย่อ.close()" aria-label="กลับ" class="x">x</button>
 			</div>
 		</dialog>
+
+		<!-- Eng -->
 		<dialog id="Project">
 			<div class="inside-dialog">
 				<h1 class="font-cmm-b">Project</h1>
@@ -83,6 +77,12 @@
 			<div class="inside-dialog">
 				<h1 class="font-cmm-b">Skill</h1>
 				<button onclick="window.Skill.close()" aria-label="close" class="x">x</button>
+			</div>
+		</dialog>
+		<dialog id="Resume">
+			<div class="inside-dialog">
+				<h1 class="font-cmm-b">Resume</h1>
+				<button onclick="window.Resume.close()" aria-label="close" class="x">x</button>
 			</div>
 		</dialog>
 	</div>
