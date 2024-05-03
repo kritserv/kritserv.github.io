@@ -1,6 +1,6 @@
 .container {
   position: absolute;
-  margin-top: 80vh;
+  margin-top: 35vw;
   height: 500px;
   padding: 12px;
   color: grey;
@@ -11,7 +11,7 @@
   margin-top: clamp(50px, 2vw, 100px);
   width: 100%;
   transition: .5s;
-  padding-bottom: 45vh;
+  padding-bottom: 25vh;
 }
 
 .container .content.contentThai {
@@ -68,15 +68,16 @@
 
 
 .menu {
-  display: inline-block;
-  font-size: clamp(15px, 1.7vw, 25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(12px, 1.7vw, 10rem);
   transition: 1.1s;
   background: #333;
-  width: clamp(220px, 30vw, 500px);
-  height: clamp(120px, 6vw, 180px);
+  width: clamp(150px, 30vw, 500px);
 }
 
-.menu:hover {
+.menu:hover, .menu.active {
   cursor: pointer;
   transition: .3s;
   transform: translateX(20px);
