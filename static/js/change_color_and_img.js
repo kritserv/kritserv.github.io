@@ -11,6 +11,6 @@ function changeColAndImg() {
 		img.src = "https://images.unsplash.com/photo-1530128118208-89f6ce02b37b";
 		document.body.style.backgroundColor = "#25282c";
 		document.documentElement.style.backgroundColor = "#25282c";
-		footer.style.backgroundColor = "red";
+		footer.style.backgroundColor = "black";
 	}
 }
