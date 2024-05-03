@@ -1,0 +1,44 @@
+dialog {
+  padding: 1rem 3rem;
+  background: #333;
+  border: 1px solid white;
+  animation: fadeIn .2s both;
+  color: white;
+  width: clamp(220px, 55vw, 1280px);
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(9px);
+  animation: fadeIn .2s both;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.x {
+  padding-left: 12px;
+  padding-right: 12px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  top: 15px;
+  border: none;
+  right: 10px;
+  position: absolute;
+  border-radius: 100%;
+  transition: .3s;
+}
+
+.x:hover {
+  cursor: pointer;
+  background: red;
+  color: white;
+  transition: .3s;
+  transform: scale(1.1);
+}
