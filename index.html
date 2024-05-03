@@ -14,34 +14,64 @@
 
 <body>
 
-	<img id="switchCol" src="https://images.unsplash.com/photo-1530128118208-89f6ce02b37b" loading="lazy" alt="background image">
+	<img class="nohighlight" id="switchCol" src="https://images.unsplash.com/photo-1530128118208-89f6ce02b37b" loading="lazy" alt="background image">
 
 	<div class="container nohighlight">
 
 		<!-- language switch -->
 		<span class="th font-cmm-r">ไทย</span>
-		<input type="checkbox" class="check" onchange="changeCol()">
+		<input type="checkbox" class="check" onchange="changeColAndImg()">
 		<span class="en font-cmm-r">English</span>
 
 		<!-- Thai -->
 		<div class="content contentThai font-cmm-b">
-			<h1>ประวัติย่อ</h1>
-			<h1>ผลงาน</h1>
-			<h1>ความสามารถ</h1>
-			<h1>ติดต่อ</h1>
+			<button class="menu" onclick="window.ประวัติย่อ.showModal();"><h1 class="font-cmm-b">ประวัติย่อ</h1></button><br>
+			<button class="menu" onclick="window.ผลงาน.showModal();"><h1 class="font-cmm-b">ผลงาน</h1></button><br>
+			<button class="menu" onclick="window.ความสามารถ.showModal();"><h1 class="font-cmm-b">ความสามารถ</h1></button>
 		</div>
 		
 		<!-- Eng -->
 		<div class="content contentEng font-cmm-b">
-			<h1>RESUME</h1>
-			<h1>PROJECT</h1>
-			<h1>SKILL</h1>
-			<h1>CONTACT</h1>
+			<button class="menu" onclick="window.Resume.showModal();"><h1 class="font-cmm-b">RESUME</h1></button><br>
+			<button class="menu" onclick="window.Project.showModal();"><h1 class="font-cmm-b">PROJECT</h1></button><br>
+			<button class="menu" onclick="window.Skill.showModal();"><h1 class="font-cmm-b">SKILL</h1></button>
 		</div>
 
 	</div>
 
-	<script type="text/javascript" src="static/js/main.js"></script>
-	
+	<div>
+		<!-- Dialog -->
+
+		<!-- Thai -->
+		<dialog id="ประวัติย่อ">
+			<h1 class="font-cmm-b">ประวัติย่อ</h1>
+			<button onclick="window.ประวัติย่อ.close()" aria-label="กลับ" class="x">x</button>
+		</dialog>
+		<dialog id="ผลงาน">
+			<h1 class="font-cmm-b">ผลงาน</h1>
+			<button onclick="window.ผลงาน.close()" aria-label="กลับ" class="x">x</button>
+		</dialog>
+		<dialog id="ความสามารถ">
+			<h1 class="font-cmm-b">ความสามารถ</h1>
+			<button onclick="window.ความสามารถ.close()" aria-label="กลับ" class="x">x</button>
+		</dialog>
+
+		<!-- Eng -->
+		<dialog id="Resume">
+			<h1 class="font-cmm-b">Resume</h1>
+			<button onclick="window.Resume.close()" aria-label="close" class="x">x</button>
+		</dialog>
+		<dialog id="Project">
+			<h1 class="font-cmm-b">Project</h1>
+			<button onclick="window.Project.close()" aria-label="close" class="x">x</button>
+		</dialog>
+		<dialog id="Skill">
+			<h1 class="font-cmm-b">Skill</h1>
+			<button onclick="window.Skill.close()" aria-label="close" class="x">x</button>
+		</dialog>
+	</div>
+
+	<script type="text/javascript" src="static/js/change_color_and_img.js"></script>
+
 </body>
 </html>

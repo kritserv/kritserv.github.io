@@ -1,4 +1,4 @@
-function changeCol() {
+function changeColAndImg() {
 	var img = document.getElementById("switchCol");
 	if (img.src == "https://images.unsplash.com/photo-1530128118208-89f6ce02b37b") {
 		img.src = "https://images.unsplash.com/photo-1489100517551-92a468b736f0";
