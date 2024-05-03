@@ -27,12 +27,13 @@ dialog::backdrop {
   padding-right: 12px;
   padding-top: 7px;
   padding-bottom: 7px;
-  top: 15px;
+  top: 25px;
   border: none;
-  right: 10px;
+  right: 30px;
   position: absolute;
   border-radius: 100%;
   transition: .3s;
+  transform: scale(1.2);
 }
 
 .x:hover {
@@ -40,5 +41,5 @@ dialog::backdrop {
   background: red;
   color: white;
   transition: .3s;
-  transform: scale(1.1);
+  transform: scale(1.9);
 }
