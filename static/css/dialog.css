@@ -4,7 +4,52 @@ dialog {
   border: 1px solid white;
   animation: fadeIn .2s both;
   color: white;
-  width: clamp(220px, 55vw, 1280px);
+  width: clamp(220px, 50vw, 1280px);
+  height: 100vh;
+  margin-right: 50px;
+}
+
+#โปรเจกต์, #ความสามารถ, #ประสบการณ์ {
+  background: #25282c;
+}
+
+#โปรเจกต์ .top a, #ความสามารถ .top a {
+  color: gold;
+}
+
+dialog .top {
+  position:fixed;
+  bottom: 25px;
+  right: 11vw; 
+  background: none;
+  width: 30px;
+  height: 30px;
+  transform: scale(1.9);
+  transition: .3s;
+}
+
+dialog h1 {
+  font-size: 3rem;
+}
+
+dialog .top:hover {
+  transform: scale(2.2) translateY(-8px);
+  transition: .3s;
+}
+
+dialog .top a {
+  text-decoration: none;
+  margin-left: 3px;
+}
+
+@media only screen and (max-width: 900px) {
+  dialog {
+    margin: auto;
+    width: 70%;
+  }
+  dialog .top {
+    right: 24vw;
+  }
 }
 
 dialog .empty_bottom {
@@ -18,7 +63,8 @@ dialog::backdrop {
 }
 
 .dLink {
-  color: #999;
+  color: gold;
+  background: rgba(0, 0, 0, .3);
 }
 
 @keyframes fadeIn {
@@ -35,7 +81,7 @@ dialog::backdrop {
   padding-right: 12px;
   padding-top: 7px;
   padding-bottom: 7px;
-  top: 25px;
+  top: 45px;
   border: none;
   right: 30px;
   position: absolute;
@@ -60,31 +106,6 @@ dialog img {
 dialog h2 {
   border-top: 3px solid white;
   margin-bottom: 12px;
-}
-
-dialog .top {
-  position:fixed;
-  bottom: 25px;
-  right: 24vw; 
-  background: none;
-  width: 30px;
-  height: 30px;
-  transform: scale(1.9);
-  transition: .3s;
-}
-
-dialog h1 {
-  font-size: 3rem;
-}
-
-dialog .top:hover {
-  transform: scale(2.2) translateY(-8px);
-  transition: .3s;
-}
-
-dialog .top a {
-  text-decoration: none;
-  margin-left: 3px;
 }
 
 dialog p {
