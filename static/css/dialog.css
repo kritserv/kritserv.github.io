@@ -7,6 +7,13 @@ dialog {
   width: clamp(220px, 50vw, 1280px);
   height: 100vh;
   margin-right: 50px;
+  overflow-x: hidden;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 #โปรเจกต์, #ความสามารถ, #ประสบการณ์ {
@@ -49,6 +56,9 @@ dialog .top a {
   }
   dialog .top {
     right: 24vw;
+  }
+  dialog h1 {
+    font-size: 2.1rem;
   }
 }
 
