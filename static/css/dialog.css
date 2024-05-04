@@ -41,7 +41,7 @@ dialog::backdrop {
   position: absolute;
   border-radius: 100%;
   transition: .3s;
-  transform: scale(1.2);
+  transform: scale(1.9);
 }
 
 .x:hover {
@@ -49,7 +49,7 @@ dialog::backdrop {
   background: red;
   color: white;
   transition: .3s;
-  transform: scale(1.9);
+  transform: scale(2.5);
 }
 
 dialog img {
@@ -71,6 +71,10 @@ dialog .top {
   height: 30px;
   transform: scale(1.9);
   transition: .3s;
+}
+
+dialog h1 {
+  font-size: 3rem;
 }
 
 dialog .top:hover {
