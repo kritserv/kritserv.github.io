@@ -79,7 +79,7 @@
 .menu:hover {
   cursor: pointer;
   transition: .3s;
-  transform: translateX(20px);
+  width: clamp(155px, 33vw, 515px);
 }
 
 .container .content.contentThai .menu {
