@@ -1,0 +1,1 @@
+"use strict";(self["webpackChunkfrontend"]=self["webpackChunkfrontend"]||[]).push([[632],{3632:function(e,n,p){e.exports=p.p+"img/card_depth.9717566c.png"}}]);
