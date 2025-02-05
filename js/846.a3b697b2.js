@@ -1,1 +1,0 @@
-"use strict";(self["webpackChunkfrontend"]=self["webpackChunkfrontend"]||[]).push([[846],{9846:function(e,n,p){e.exports=p.p+"img/card.1159d610.jpg"}}]);
