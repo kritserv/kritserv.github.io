@@ -3,10 +3,8 @@
     <canvas ref="pixiCanvas"></canvas>
   </div>
 </template>
-
 <script>
 import * as PIXI from "pixi.js";
-
 export default {
   name: "HelloWorld",
   data() {
@@ -22,16 +20,13 @@ export default {
   },
   methods: {
     detectDevice() {
-      // Simple mobile detection
+      // Detect mobile via touch capability and screen size
       this.isMobile =
-        /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-          navigator.userAgent
-        );
+        ("maxTouchPoints" in navigator && navigator.maxTouchPoints > 0) ||
+        window.innerWidth <= 768;
     },
-
     async drawPixi() {
       this.detectDevice();
-
       try {
         this.app = new PIXI.Application();
         await this.app.init({
@@ -53,68 +48,69 @@ export default {
         this.originalImageWidth = texture.width;
         this.originalImageHeight = texture.height;
 
-        this.scaleSprite();
-        this.app.stage.addChild(this.sprite);
+        const container = new PIXI.Container();
+        container.addChild(this.sprite);
+        this.app.stage.addChild(container);
+
+        this.resizeAndPositionSprite(container);
 
         const depthTexture = await PIXI.Assets.load(depthModule.default);
         this.depthMap = new PIXI.Sprite(depthTexture);
-        this.depthMap.width = window.innerWidth;
-        this.depthMap.height = window.innerHeight;
+
+        this.resizeDepthMap();
 
         this.displacementFilter = new PIXI.DisplacementFilter(this.depthMap);
         this.displacementFilter.scale.x = 0;
         this.displacementFilter.scale.y = 0;
 
-        this.app.stage.filters = [this.displacementFilter];
+        container.filters = [this.displacementFilter];
+        this.app.stage.addChild(this.depthMap);
 
-        // Only add mouse move listener on desktop
         if (!this.isMobile) {
           window.addEventListener("mousemove", this.handleMouseMove);
         }
-
         window.addEventListener("resize", this.handleResize);
       } catch (error) {
         console.error("Error initializing PixiJS:", error);
       }
     },
-
-    scaleSprite() {
+    resizeAndPositionSprite(container) {
       const windowRatio = window.innerWidth / window.innerHeight;
       const imageRatio = this.originalImageWidth / this.originalImageHeight;
 
+      // Ensure full coverage while maintaining aspect ratio
       if (windowRatio > imageRatio) {
-        this.sprite.width = window.innerWidth;
-        this.sprite.height = window.innerWidth / imageRatio;
+        container.scale.set(window.innerWidth / this.originalImageWidth);
       } else {
-        this.sprite.height = window.innerHeight;
-        this.sprite.width = window.innerHeight * imageRatio;
+        container.scale.set(window.innerHeight / this.originalImageHeight);
       }
 
-      this.sprite.x = (window.innerWidth - this.sprite.width) / 2;
-      this.sprite.y = (window.innerHeight - this.sprite.height) / 2;
+      container.x = (window.innerWidth - container.width) / 2;
+      container.y = (window.innerHeight - container.height) / 2;
     },
+    resizeDepthMap() {
+      const container = this.sprite.parent;
+      this.depthMap.width = this.originalImageWidth * container.scale.x;
+      this.depthMap.height = this.originalImageHeight * container.scale.y;
 
+      this.depthMap.x = container.x;
+      this.depthMap.y = container.y;
+    },
     handleMouseMove(e) {
       if (this.displacementFilter && !this.isMobile) {
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
-
         this.displacementFilter.scale.x = (centerX - e.clientX) / 20;
         this.displacementFilter.scale.y = (centerY - e.clientY) / 20;
       }
     },
-
     handleResize() {
       if (this.app && this.sprite) {
         this.app.screen.width = window.innerWidth;
         this.app.screen.height = window.innerHeight;
 
-        this.scaleSprite();
-
-        if (this.depthMap) {
-          this.depthMap.width = window.innerWidth;
-          this.depthMap.height = window.innerHeight;
-        }
+        this.resizeAndPositionSprite(this.sprite.parent);
+        this.resizeDepthMap();
 
         this.app.render();
       }
@@ -134,7 +130,6 @@ export default {
   },
 };
 </script>
-
 <style scoped>
 .pixi-container {
   width: 100vw;
@@ -142,7 +137,6 @@ export default {
   position: relative;
   overflow: hidden;
 }
-
 canvas {
   position: absolute;
   top: 0;
