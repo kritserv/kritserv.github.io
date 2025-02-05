@@ -1,7 +1,16 @@
 <template>
   <div class="pixi-container">
-    <canvas ref="pixiCanvas"></canvas>
+    <img src="../assets/card.jpg" alt="Card" class="mobile-image" />
+    <canvas ref="pixiCanvas" class="desktop-canvas"></canvas>
   </div>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+  </p>
 </template>
 <script>
 import * as PIXI from "pixi.js";
@@ -15,18 +24,10 @@ export default {
       displacementFilter: null,
       originalImageWidth: 0,
       originalImageHeight: 0,
-      isMobile: false,
     };
   },
   methods: {
-    detectDevice() {
-      // Detect mobile via touch capability and screen size
-      this.isMobile =
-        ("maxTouchPoints" in navigator && navigator.maxTouchPoints > 0) ||
-        window.innerWidth <= 768;
-    },
     async drawPixi() {
-      this.detectDevice();
       try {
         this.app = new PIXI.Application();
         await this.app.init({
@@ -66,9 +67,7 @@ export default {
         container.filters = [this.displacementFilter];
         this.app.stage.addChild(this.depthMap);
 
-        if (!this.isMobile) {
-          window.addEventListener("mousemove", this.handleMouseMove);
-        }
+        window.addEventListener("mousemove", this.handleMouseMove);
         window.addEventListener("resize", this.handleResize);
       } catch (error) {
         console.error("Error initializing PixiJS:", error);
@@ -78,7 +77,6 @@ export default {
       const windowRatio = window.innerWidth / window.innerHeight;
       const imageRatio = this.originalImageWidth / this.originalImageHeight;
 
-      // Ensure full coverage while maintaining aspect ratio
       if (windowRatio > imageRatio) {
         container.scale.set(window.innerWidth / this.originalImageWidth);
       } else {
@@ -97,7 +95,7 @@ export default {
       this.depthMap.y = container.y;
     },
     handleMouseMove(e) {
-      if (this.displacementFilter && !this.isMobile) {
+      if (this.displacementFilter) {
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
         this.displacementFilter.scale.x = (centerX - e.clientX) / 20;
@@ -108,10 +106,8 @@ export default {
       if (this.app && this.sprite) {
         this.app.screen.width = window.innerWidth;
         this.app.screen.height = window.innerHeight;
-
         this.resizeAndPositionSprite(this.sprite.parent);
         this.resizeDepthMap();
-
         this.app.render();
       }
     },
@@ -121,10 +117,8 @@ export default {
   },
   beforeUnmount() {
     if (this.app) {
+      window.removeEventListener("mousemove", this.handleMouseMove);
       window.removeEventListener("resize", this.handleResize);
-      if (!this.isMobile) {
-        window.removeEventListener("mousemove", this.handleMouseMove);
-      }
       this.app.destroy(true);
     }
   },
@@ -137,9 +131,28 @@ export default {
   position: relative;
   overflow: hidden;
 }
-canvas {
+
+/* Mobile styles */
+.mobile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: none;
+}
+
+.desktop-canvas {
   position: absolute;
   top: 0;
   left: 0;
+}
+
+/* Media query for mobile */
+@media (max-width: 768px) {
+  .mobile-image {
+    display: block;
+  }
+  .desktop-canvas {
+    display: none;
+  }
 }
 </style>
