@@ -1,14 +1,48 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
+  <div class="nav-desktop">
+    <nav>
+      <span v-if="$route.path != '/'">
+        <router-link to="/">Top</router-link>
+        |
+      </span>
+      <span v-if="$route.path == '/'"
+        ><a style="color: #42b983" href="#">Top</a> | <a href="#work">Work</a> |
+        <a href="#experience">Experience</a> |
+      </span>
+      <router-link to="/contact">Contact</router-link>
+    </nav>
+  </div>
+  <div class="nav-mobile">
+    <nav>
+      <template v-if="$route.path != '/'">
+        <router-link to="/">
+          <i class="sprite nav-icon home-icon"></i>
+        </router-link>
+      </template>
+      <template v-if="$route.path == '/'">
+        <a style="color: #42b983" href="#">
+          <i class="sprite nav-icon home-icon"></i>
+        </a>
+        <a href="#work">
+          <i class="sprite nav-icon work-icon"></i>
+        </a>
+        <a href="#experience">
+          <i class="sprite nav-icon experience-icon"></i>
+        </a>
+      </template>
+      <router-link to="/contact">
+        <i class="sprite nav-icon contact-icon"></i>
+      </router-link>
+    </nav>
+  </div>
   <router-view />
 </template>
-
 <style>
 html {
+  margin: 0;
+  padding: 0;
   background: black;
+  scroll-behavior: smooth;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -18,17 +52,75 @@ html {
   color: #ffffff;
   overflow: hidden;
 }
-
+.sprite {
+  width: 128px;
+  height: 128px;
+  display: block;
+}
 nav {
-  padding: 30px;
+  z-index: 1;
+  position: fixed;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+@media only screen and (max-width: 600px) {
+  .nav-desktop {
+    display: none;
+  }
+  nav {
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    overflow-x: hidden;
+  }
+  .nav-mobile nav > div,
+  .nav-mobile nav > a {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-icon {
+    zoom: 0.2;
+    margin: 0 auto;
+    margin-bottom: 35px;
+  }
+  .home-icon {
+    background: url("assets/spritesheet.png") -0px -0px;
+  }
+  .work-icon {
+    background: url("assets/spritesheet.png") -128px -0px;
+  }
+  .experience-icon {
+    background: url("assets/spritesheet.png") -256px -0px;
+  }
+  .contact-icon {
+    background: url("assets/spritesheet.png") -384px -0px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .nav-mobile {
+    display: none;
+  }
+  nav {
+    padding: 25px;
+    top: 0;
+    width: 100%;
+    text-align: left;
+  }
+  nav a {
+    font-weight: bold;
+    color: #2c3e50;
+  }
+  nav a.router-link-exact-active {
+    color: #42b983;
+  }
 }
 
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
+th {
+  background: #2c3e50;
 }
-
-nav a.router-link-exact-active {
+.primary-color {
   color: #42b983;
 }
 </style>

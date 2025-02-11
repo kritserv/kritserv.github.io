@@ -1,19 +1,185 @@
 <template>
-  <div class="pixi-container">
-    <img src="../assets/card.jpg" alt="Card" class="mobile-image" />
-    <canvas ref="pixiCanvas" class="desktop-canvas"></canvas>
-  </div>
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  </p>
+  <section>
+    <div class="pixi-container">
+      <img
+        src="../assets/card.jpg"
+        alt="Card"
+        class="fallback-image"
+        :class="{ show: isTouchDevice }"
+      />
+      <canvas
+        ref="pixiCanvas"
+        class="desktop-canvas"
+        :class="{ hide: isTouchDevice }"
+      ></canvas>
+    </div>
+  </section>
+  <section id="work">
+    <br /><br /><br /><br />
+    <h1 class="primary-color">Work</h1>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1 class="primary-color">Personal project</h1>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1>My skillset</h1>
+    <h3 class="primary-color">Preferred languages and framework</h3>
+    <table>
+      <tbody>
+        <tr>
+          <th scope="row"></th>
+          <th scope="row">Framework</th>
+          <th scope="row">Usage</th>
+        </tr>
+        <tr>
+          <td><i class="sprite skill-icon python"></i> python</td>
+          <td>
+            <i class="sprite skill-icon flask"></i> flask
+            <i class="sprite skill-icon django"></i> django
+            <i class="sprite skill-icon pandas"></i> pandas
+            <i class="sprite skill-icon scikitlearn"></i> scikit-learn
+            <i class="sprite skill-icon jupyternotebook"></i> jupyter notebook
+            <i class="sprite skill-icon pygame"></i> pygame
+          </td>
+          <td>
+            Backend, Data analysis, Data transformation, Data migration, Machine
+            learning, Game development
+          </td>
+        </tr>
+        <tr>
+          <td><i class="sprite skill-icon javascript"></i> javascript</td>
+          <td><i class="sprite skill-icon vue"></i> vue</td>
+          <td>Frontend</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="skills-grid">
+      <div class="skills-item">
+        <h3 class="primary-color">Other Known Languages</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <th scope="row">Usage</th>
+            </tr>
+            <tr>
+              <td><i class="sprite skill-icon go"></i> go</td>
+              <td>Backend</td>
+            </tr>
+            <tr>
+              <td><i class="sprite skill-icon r"></i> r</td>
+              <td>Data analysis</td>
+            </tr>
+            <tr>
+              <td><i class="sprite skill-icon linux"></i> bash</td>
+              <td>Automation</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="skills-item">
+        <h3 class="primary-color">Linux Distribution</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <th scope="row">Usage</th>
+            </tr>
+            <tr>
+              <td><i class="sprite skill-icon ubuntu"></i> ubuntu</td>
+              <td>Server, Docker Container, Github Action</td>
+            </tr>
+            <tr>
+              <td><i class="sprite skill-icon fedora"></i> fedora</td>
+              <td>Programming</td>
+            </tr>
+            <tr>
+              <td><i class="sprite skill-icon linuxmint"></i> linux mint</td>
+              <td>Daily Driver</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="skills-item">
+        <h3 class="primary-color">Other Tools</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <th scope="row">Usage</th>
+            </tr>
+            <tr>
+              <td>
+                <i class="sprite skill-icon html"></i> html
+                <i class="sprite skill-icon css"></i> css
+              </td>
+              <td>Create website</td>
+            </tr>
+            <tr>
+              <td><i class="sprite skill-icon docker"></i> docker</td>
+              <td>Build, share and run web application</td>
+            </tr>
+            <tr>
+              <td><i class="sprite skill-icon git"></i> git</td>
+              <td>Version control, open-source and contribution</td>
+            </tr>
+            <tr>
+              <td>
+                <i class="sprite skill-icon aws"></i> aws (lightsail)<i
+                  class="sprite skill-icon pythonanywhere"
+                ></i>
+                pythonanywhere
+              </td>
+              <td>Deploy web application</td>
+            </tr>
+            <tr>
+              <td>
+                <i class="sprite skill-icon postgres"></i> postgres
+                <i class="sprite skill-icon mysql"></i> mysql
+                <i class="sprite skill-icon sqlite"></i> sqlite
+              </td>
+              <td>Database</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="skills-item">
+        <h3 class="primary-color">Software</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th scope="row"></th>
+              <th scope="row">Usage</th>
+            </tr>
+            <tr>
+              <td>
+                <i class="sprite skill-icon tableau"></i> tableau<i
+                  class="sprite skill-icon powerbi"
+                ></i>
+                ms power bi
+              </td>
+              <td>Data Dashboard</td>
+            </tr>
+            <tr>
+              <td>
+                <i class="sprite skill-icon photoshop"></i> adobe photoshop
+              </td>
+              <td>Graphic editor</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </section>
+  <section id="experience">
+    <br /><br /><br /><br />
+    <h1 class="primary-color">Experience</h1>
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </section>
 </template>
+
 <script>
 import * as PIXI from "pixi.js";
+
 export default {
   name: "HelloWorld",
   data() {
@@ -24,10 +190,23 @@ export default {
       displacementFilter: null,
       originalImageWidth: 0,
       originalImageHeight: 0,
+      isTouchDevice: false,
     };
   },
   methods: {
+    checkTouchDevice() {
+      // Check if device supports touch
+      this.isTouchDevice =
+        "ontouchstart" in window ||
+        navigator.maxTouchPoints > 0 ||
+        navigator.msMaxTouchPoints > 0;
+    },
     async drawPixi() {
+      // Don't initialize Pixi.js if it's a touch device
+      if (this.isTouchDevice) {
+        return;
+      }
+
       try {
         this.app = new PIXI.Application();
         await this.app.init({
@@ -113,6 +292,7 @@ export default {
     },
   },
   mounted() {
+    this.checkTouchDevice();
     this.drawPixi();
   },
   beforeUnmount() {
@@ -124,20 +304,25 @@ export default {
   },
 };
 </script>
+
 <style scoped>
 .pixi-container {
   width: 100vw;
   height: 100vh;
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 
-/* Mobile styles */
-.mobile-image {
+.fallback-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: none;
+}
+
+.fallback-image.show {
+  display: block;
 }
 
 .desktop-canvas {
@@ -145,14 +330,143 @@ export default {
   top: 0;
   left: 0;
 }
+table {
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+th,
+td {
+  padding: 8px;
+}
+tr {
+  border-bottom: 1px solid #ddd;
+  transition: 0.2s;
+}
+.desktop-canvas.hide {
+  display: none;
+}
+.skills-grid {
+  display: grid;
+  gap: 2rem;
+  width: 100%;
+}
+.skill-icon {
+  margin: 0 auto;
+}
+@media only screen and (max-width: 600px) {
+  .skill-icon {
+    zoom: 0.2;
+    margin: 0 auto;
+  }
 
-/* Media query for mobile */
-@media (max-width: 768px) {
-  .mobile-image {
-    display: block;
+  .skills-grid {
+    grid-template-columns: 1fr;
   }
-  .desktop-canvas {
-    display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  tr:hover {
+    background-color: #2c3e50;
+    transition: 0.2s;
   }
+  .skill-icon {
+    transform: scale(0.75);
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1100px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.skills-item {
+  width: 100%;
+}
+.python {
+  background: url("../assets/spritesheet.png") -768px -0px;
+}
+.flask {
+  background: url("../assets/spritesheet.png") -896px -0px;
+}
+.django {
+  background: url("../assets/spritesheet.png") -1024px -0px;
+}
+.pandas {
+  background: url("../assets/spritesheet.png") -1152px -0px;
+}
+.scikitlearn {
+  background: url("../assets/spritesheet.png") -0px -128px;
+}
+.jupyternotebook {
+  background: url("../assets/spritesheet.png") -128px -128px;
+}
+.pygame {
+  background: url("../assets/spritesheet.png") -256px -128px;
+}
+.html {
+  background: url("../assets/spritesheet.png") -384px -128px;
+}
+.css {
+  background: url("../assets/spritesheet.png") -512px -128px;
+}
+.javascript {
+  background: url("../assets/spritesheet.png") -640px -128px;
+}
+.vue {
+  background: url("../assets/spritesheet.png") -768px -128px;
+}
+.go {
+  background: url("../assets/spritesheet.png") -896px -128px;
+}
+.r {
+  background: url("../assets/spritesheet.png") -1024px -128px;
+}
+.linux {
+  background: url("../assets/spritesheet.png") -1152px -128px;
+}
+.ubuntu {
+  background: url("../assets/spritesheet.png") -0px -256px;
+}
+.linuxmint {
+  background: url("../assets/spritesheet.png") -128px -256px;
+}
+.fedora {
+  background: url("../assets/spritesheet.png") -256px -256px;
+}
+.docker {
+  background: url("../assets/spritesheet.png") -384px -256px;
+}
+.git {
+  background: url("../assets/spritesheet.png") -512px -256px;
+}
+.aws {
+  background: url("../assets/spritesheet.png") -640px -256px;
+}
+.pythonanywhere {
+  background: url("../assets/spritesheet.png") -768px -256px;
+}
+.postgres {
+  background: url("../assets/spritesheet.png") -896px -256px;
+}
+.mysql {
+  background: url("../assets/spritesheet.png") -1024px -256px;
+}
+.sqlite {
+  background: url("../assets/spritesheet.png") -1152px -256px;
+}
+.tableau {
+  background: url("../assets/spritesheet.png") -0px -384px;
+}
+.powerbi {
+  background: url("../assets/spritesheet.png") -128px -384px;
+}
+.photoshop {
+  background: url("../assets/spritesheet.png") -256px -384px;
 }
 </style>
