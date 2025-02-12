@@ -7,9 +7,10 @@
       </span>
       <span v-if="$route.path == '/'"
         ><a style="color: #42b983" href="#">Top</a> | <a href="#work">Work</a> |
-        <a href="#experience">Experience</a> |
+        <a href="#education">Education</a> |
       </span>
-      <router-link to="/contact">Contact</router-link>
+      <router-link to="/contact">Contact</router-link> |
+      <router-link to="/blog">Blog</router-link>
     </nav>
   </div>
   <div class="nav-mobile">
@@ -26,12 +27,15 @@
         <a href="#work">
           <i class="sprite nav-icon work-icon"></i>
         </a>
-        <a href="#experience">
-          <i class="sprite nav-icon experience-icon"></i>
+        <a href="#education">
+          <i class="sprite nav-icon education-icon"></i>
         </a>
       </template>
       <router-link to="/contact">
         <i class="sprite nav-icon contact-icon"></i>
+      </router-link>
+      <router-link to="/blog">
+        <i class="sprite nav-icon blog-icon"></i>
       </router-link>
     </nav>
   </div>
@@ -91,11 +95,14 @@ nav {
   .work-icon {
     background: url("assets/spritesheet.png") -128px -0px;
   }
-  .experience-icon {
+  .education-icon {
     background: url("assets/spritesheet.png") -256px -0px;
   }
   .contact-icon {
     background: url("assets/spritesheet.png") -384px -0px;
+  }
+  .blog-icon {
+    background: url("assets/spritesheet.png") -512px -0px;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -122,5 +129,17 @@ th {
 }
 .primary-color {
   color: #42b983;
+}
+hr {
+  border: 4px solid #42b983;
+  border-radius: 25px;
+}
+.openinnewtab {
+  background: url("assets/spritesheet.png") -640px -0px;
+  zoom: 0.2;
+}
+.github {
+  background: url("assets/spritesheet.png") -768px -512px;
+  zoom: 0.2;
 }
 </style>

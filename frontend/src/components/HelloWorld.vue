@@ -16,10 +16,188 @@
   </section>
   <section id="work">
     <br /><br /><br /><br />
-    <h1 class="primary-color">Work</h1>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-    <h1 class="primary-color">Personal project</h1>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <h1>Work</h1>
+
+    <h3 class="primary-color">Python Programmer</h3>
+    <h4>
+      บริษัท เอ็ม.ดี.ซอฟต์ จำกัด - M.D.Soft Co.,Ltd. (May 2024 - Feb 2025)
+    </h4>
+    <table>
+      <tbody>
+        <tr>
+          <th scope="row">Project</th>
+          <th scope="row">Detail</th>
+          <th scope="row">Skills</th>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="primary-color">Backend Developer (Internship)</h3>
+    <h4>
+      บริษัท อมรินทร์ คอร์เปอเรชั่นส์ จำกัด (มหาชน) - Amarin (July 2023 - Oct
+      2023)
+    </h4>
+    <table>
+      <tbody>
+        <tr>
+          <th scope="row">Project</th>
+          <th scope="row">Detail</th>
+          <th scope="row">Skills</th>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br /><br /><br />
+    <h1>Personal project</h1>
+
+    <table>
+      <tbody>
+        <tr>
+          <th scope="row">Project</th>
+          <th scope="row">Detail</th>
+          <th scope="row">Skills</th>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a
+            ><a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite github"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a
+            ><a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite github"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a
+            ><a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite github"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+        <tr>
+          <td>
+            <img class="project-img" src="https://placehold.jp/250x150.png" />
+          </td>
+          <td>
+            ...<a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite openinnewtab"
+            ></a
+            ><a
+              href="https://www.google.com/"
+              target="_blank"
+              class="sprite github"
+            ></a>
+          </td>
+          <td>...</td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br /><br /><br /><br />
+
+    <hr />
     <h1>My skillset</h1>
     <h3 class="primary-color">Preferred languages and framework</h3>
     <table>
@@ -30,7 +208,9 @@
           <th scope="row">Usage</th>
         </tr>
         <tr>
-          <td><i class="sprite skill-icon python"></i> python</td>
+          <td>
+            <i class="sprite main-skill-icon skill-icon python"></i>python
+          </td>
           <td>
             <i class="sprite skill-icon flask"></i> flask
             <i class="sprite skill-icon django"></i> django
@@ -51,6 +231,8 @@
         </tr>
       </tbody>
     </table>
+    <hr />
+    <br /><br />
     <div class="skills-grid">
       <div class="skills-item">
         <h3 class="primary-color">Other Known Languages</h3>
@@ -85,7 +267,7 @@
             </tr>
             <tr>
               <td><i class="sprite skill-icon ubuntu"></i> ubuntu</td>
-              <td>Server, Docker Container, Github Action</td>
+              <td>Server, docker container, github action</td>
             </tr>
             <tr>
               <td><i class="sprite skill-icon fedora"></i> fedora</td>
@@ -111,7 +293,7 @@
                 <i class="sprite skill-icon html"></i> html
                 <i class="sprite skill-icon css"></i> css
               </td>
-              <td>Create website</td>
+              <td>Frontend, create static website</td>
             </tr>
             <tr>
               <td><i class="sprite skill-icon docker"></i> docker</td>
@@ -168,11 +350,18 @@
         </table>
       </div>
     </div>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br />
+    <hr />
   </section>
-  <section id="experience">
+  <section id="education">
     <br /><br /><br /><br />
-    <h1 class="primary-color">Experience</h1>
+    <h1 class="primary-color">Education</h1>
+    <h4>
+      Bachelor's in Data Science (<span class="primary-color">3.61 GPA</span>,
+      Silpakorn Sanamchandra)
+    </h4>
+    <h4>Mostly self taught.</h4>
+
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </section>
 </template>
@@ -306,6 +495,10 @@ export default {
 </script>
 
 <style scoped>
+.project-img {
+  width: clamp(100px, 33vw, 250px);
+  height: auto;
+}
 .pixi-container {
   width: 100vw;
   height: 100vh;
@@ -372,7 +565,10 @@ tr {
     transition: 0.2s;
   }
   .skill-icon {
-    transform: scale(0.75);
+    zoom: 0.4;
+  }
+  .main-skill-icon {
+    zoom: 1.2;
   }
 
   .skills-grid {

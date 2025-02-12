@@ -82,10 +82,6 @@ td {
 i {
   zoom: 0.3;
 }
-
-.github {
-  background: url("../assets/spritesheet.png") -768px -512px;
-}
 .linkedin {
   background: url("../assets/spritesheet.png") -384px -384px;
 }
@@ -97,9 +93,5 @@ i {
 }
 .stackoverflow {
   background: url("../assets/spritesheet.png") -768px -384px;
-}
-.openinnewtab {
-  background: url("../assets/spritesheet.png") -640px -0px;
-  zoom: 0.2;
 }
 </style>
