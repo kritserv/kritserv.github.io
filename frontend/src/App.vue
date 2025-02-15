@@ -2,7 +2,7 @@
   <div class="nav-desktop">
     <nav>
       <span v-if="$route.path != '/'">
-        <router-link to="/">Top</router-link>
+        <router-link to="/">Home</router-link>
         |
       </span>
       <span v-if="$route.path == '/'"
@@ -39,7 +39,9 @@
       </router-link>
     </nav>
   </div>
-  <router-view />
+  <transition name="fade" mode="out-in">
+    <router-view />
+  </transition>
 </template>
 <style>
 html {
@@ -47,6 +49,15 @@ html {
   padding: 0;
   background: black;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

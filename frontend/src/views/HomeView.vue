@@ -7,6 +7,7 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import AOS from "aos";
 
 export default {
   name: "HomeView",
@@ -14,4 +15,5 @@ export default {
     HelloWorld,
   },
 };
+AOS.init();
 </script>

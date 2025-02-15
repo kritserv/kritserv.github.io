@@ -1,6 +1,6 @@
 <template>
   <section>
-    <div class="pixi-container">
+    <div class="pixi-container" data-aos="zoom-out">
       <img
         src="../assets/card.jpg"
         alt="Card"
@@ -14,22 +14,29 @@
       ></canvas>
     </div>
   </section>
+  <div class="pixi-container menu" data-aos="fade-left">
+    <a href="#work" class="button wor-menu">WORK</a><br />
+    <a href="#education" class="button edu-menu">EDUCATION</a><br />
+    <router-link to="/contact" class="button con-menu">CONTACT</router-link
+    ><br />
+    <router-link to="/blog" class="button blo-menu">BLOG</router-link>
+  </div>
   <section id="work">
     <br /><br /><br /><br />
-    <h1>Work</h1>
+    <h1 data-aos="zoom-out">Work</h1>
 
-    <h3 class="primary-color">Python Programmer</h3>
-    <h4>
+    <h3 class="primary-color" data-aos="fade-down">Python Programmer</h3>
+    <h4 data-aos="fade-down">
       บริษัท เอ็ม.ดี.ซอฟต์ จำกัด - M.D.Soft Co.,Ltd. (May 2024 - Feb 2025)
     </h4>
     <table>
       <tbody>
-        <tr>
+        <tr data-aos="fade-down">
           <th scope="row">Project</th>
           <th scope="row">Detail</th>
           <th scope="row">Skills</th>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -42,7 +49,7 @@
           </td>
           <td>...</td>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -55,7 +62,7 @@
           </td>
           <td>...</td>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -68,7 +75,7 @@
           </td>
           <td>...</td>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -84,19 +91,21 @@
       </tbody>
     </table>
 
-    <h3 class="primary-color">Backend Developer (Internship)</h3>
-    <h4>
+    <h3 class="primary-color" data-aos="fade-down">
+      Backend Developer (Internship)
+    </h3>
+    <h4 data-aos="fade-down">
       บริษัท อมรินทร์ คอร์เปอเรชั่นส์ จำกัด (มหาชน) - Amarin (July 2023 - Oct
       2023)
     </h4>
     <table>
       <tbody>
-        <tr>
+        <tr data-aos="fade-down">
           <th scope="row">Project</th>
           <th scope="row">Detail</th>
           <th scope="row">Skills</th>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -112,16 +121,16 @@
       </tbody>
     </table>
     <br /><br /><br /><br />
-    <h1>Personal project</h1>
+    <h1 data-aos="zoom-out">Personal project</h1>
 
     <table>
       <tbody>
-        <tr>
+        <tr data-aos="fade-down">
           <th scope="row">Project</th>
           <th scope="row">Detail</th>
           <th scope="row">Skills</th>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -139,7 +148,7 @@
           </td>
           <td>...</td>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -157,7 +166,7 @@
           </td>
           <td>...</td>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -175,7 +184,7 @@
           </td>
           <td>...</td>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <img class="project-img" src="https://placehold.jp/250x150.png" />
           </td>
@@ -198,16 +207,18 @@
     <br /><br /><br /><br /><br />
 
     <hr />
-    <h1>My skillset</h1>
-    <h3 class="primary-color">Preferred languages and framework</h3>
+    <h1 data-aos="zoom-out">My skillset</h1>
+    <h3 class="primary-color" data-aos="fade-down">
+      Preferred languages and framework
+    </h3>
     <table>
       <tbody>
-        <tr>
+        <tr data-aos="fade-down">
           <th scope="row"></th>
           <th scope="row">Framework</th>
           <th scope="row">Usage</th>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td>
             <i class="sprite main-skill-icon skill-icon python"></i>python
           </td>
@@ -224,7 +235,7 @@
             learning, Game development
           </td>
         </tr>
-        <tr>
+        <tr data-aos="fade-down">
           <td><i class="sprite skill-icon javascript"></i> javascript</td>
           <td><i class="sprite skill-icon vue"></i> vue</td>
           <td>Frontend</td>
@@ -235,22 +246,24 @@
     <br /><br />
     <div class="skills-grid">
       <div class="skills-item">
-        <h3 class="primary-color">Other Known Languages</h3>
+        <h3 class="primary-color" data-aos="fade-down">
+          Other Known Languages
+        </h3>
         <table>
           <tbody>
-            <tr>
+            <tr data-aos="fade-down">
               <th scope="row"></th>
               <th scope="row">Usage</th>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td><i class="sprite skill-icon go"></i> go</td>
               <td>Backend</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td><i class="sprite skill-icon r"></i> r</td>
               <td>Data analysis</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td><i class="sprite skill-icon linux"></i> bash</td>
               <td>Automation</td>
             </tr>
@@ -258,22 +271,22 @@
         </table>
       </div>
       <div class="skills-item">
-        <h3 class="primary-color">Linux Distribution</h3>
+        <h3 class="primary-color" data-aos="fade-down">Linux Distribution</h3>
         <table>
           <tbody>
-            <tr>
+            <tr data-aos="fade-down">
               <th scope="row"></th>
               <th scope="row">Usage</th>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td><i class="sprite skill-icon ubuntu"></i> ubuntu</td>
               <td>Server, docker container, github action</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td><i class="sprite skill-icon fedora"></i> fedora</td>
               <td>Programming</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td><i class="sprite skill-icon linuxmint"></i> linux mint</td>
               <td>Daily Driver</td>
             </tr>
@@ -281,29 +294,29 @@
         </table>
       </div>
       <div class="skills-item">
-        <h3 class="primary-color">Other Tools</h3>
+        <h3 class="primary-color" data-aos="fade-down">Other Tools</h3>
         <table>
           <tbody>
-            <tr>
+            <tr data-aos="fade-down">
               <th scope="row"></th>
               <th scope="row">Usage</th>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td>
                 <i class="sprite skill-icon html"></i> html
                 <i class="sprite skill-icon css"></i> css
               </td>
               <td>Frontend, create static website</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td><i class="sprite skill-icon docker"></i> docker</td>
               <td>Build, share and run web application</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td><i class="sprite skill-icon git"></i> git</td>
               <td>Version control, open-source and contribution</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td>
                 <i class="sprite skill-icon aws"></i> aws (lightsail)<i
                   class="sprite skill-icon pythonanywhere"
@@ -312,7 +325,7 @@
               </td>
               <td>Deploy web application</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td>
                 <i class="sprite skill-icon postgres"></i> postgres
                 <i class="sprite skill-icon mysql"></i> mysql
@@ -324,14 +337,14 @@
         </table>
       </div>
       <div class="skills-item">
-        <h3 class="primary-color">Software</h3>
+        <h3 class="primary-color" data-aos="fade-down">Software</h3>
         <table>
           <tbody>
-            <tr>
+            <tr data-aos="fade-down">
               <th scope="row"></th>
               <th scope="row">Usage</th>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td>
                 <i class="sprite skill-icon tableau"></i> tableau<i
                   class="sprite skill-icon powerbi"
@@ -340,7 +353,7 @@
               </td>
               <td>Data Dashboard</td>
             </tr>
-            <tr>
+            <tr data-aos="fade-down">
               <td>
                 <i class="sprite skill-icon photoshop"></i> adobe photoshop
               </td>
@@ -355,12 +368,12 @@
   </section>
   <section id="education">
     <br /><br /><br /><br />
-    <h1 class="primary-color">Education</h1>
-    <h4>
+    <h1 class="primary-color" data-aos="flip-down">Education</h1>
+    <h4 data-aos="flip-down">
       Bachelor's in Data Science (<span class="primary-color">3.61 GPA</span>,
       Silpakorn Sanamchandra)
     </h4>
-    <h4>Mostly self taught.</h4>
+    <h4 data-aos="flip-down">Mostly self taught.</h4>
 
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
   </section>
@@ -523,6 +536,29 @@ export default {
   top: 0;
   left: 0;
 }
+
+.menu {
+  position: absolute;
+  top: 10px;
+  z-index: 2;
+}
+a.button {
+  color: #42b983;
+  position: relative;
+  text-decoration: none;
+  font-size: clamp(5px, calc(100vw / 12), 150px);
+}
+
+a.button::before {
+  position: absolute;
+  width: 0;
+  height: 100%;
+  overflow: hidden;
+  color: #42b983;
+  border-right: 8px solid #42b983;
+  transition: 0.4s ease-in-out;
+}
+
 table {
   margin-left: auto;
   margin-right: auto;
@@ -557,6 +593,22 @@ tr {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+  a.button {
+    width: 100%;
+    filter: drop-shadow(0 0 25px #42b983);
+  }
+  .menu {
+    top: 15%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+  a.button {
+    color: #42b983;
+    position: relative;
+    text-decoration: none;
+    font-size: clamp(5px, calc(100vw / 7), 150px);
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -573,6 +625,26 @@ tr {
 
   .skills-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  a.button {
+    -webkit-text-stroke: 3px #42b983;
+    color: transparent;
+  }
+  a.button:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px #42b983);
+  }
+  .wor-menu::before {
+    content: "WORK";
+  }
+  .edu-menu::before {
+    content: "EDUCATION";
+  }
+  .con-menu::before {
+    content: "CONTACT";
+  }
+  .blo-menu::before {
+    content: "BLOG";
   }
 }
 
