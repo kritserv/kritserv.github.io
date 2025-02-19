@@ -10,7 +10,9 @@
   "dependencies": {
     "@babel/preset-env": "^7.26.7",
     "aos": "^2.3.4",
+    "axios": "^1.7.9",
     "core-js": "^3.8.3",
+    "dompurify": "^3.2.4",
     "pixi.js": "^8.7.3",
     "vue": "^3.2.26",
     "vue-router": "^4.0.3"

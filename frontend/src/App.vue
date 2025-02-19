@@ -2,7 +2,7 @@
   <div class="nav-desktop">
     <nav>
       <span v-if="$route.path != '/'">
-        <router-link to="/">Home</router-link>
+        <router-link to="/">Portfolio</router-link>
         |
       </span>
       <span v-if="$route.path == '/'"
@@ -33,9 +33,6 @@
       </template>
       <router-link to="/contact">
         <i class="sprite nav-icon contact-icon"></i>
-      </router-link>
-      <router-link to="/blog">
-        <i class="sprite nav-icon blog-icon"></i>
       </router-link>
     </nav>
   </div>

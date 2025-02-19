@@ -26,6 +26,14 @@ const routes = [
       title: "kritserv blog",
     },
   },
+  {
+    path: "/content/:id",
+    name: "content",
+    component: () => import("../views/ContentView.vue"),
+    meta: {
+      title: "kritserv blog",
+    },
+  },
 ];
 
 const router = createRouter({
