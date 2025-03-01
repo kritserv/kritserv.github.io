@@ -1,0 +1,1132 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1, user-scalable=1"
+        />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+        <title>kritserv portfolio</title>
+        <meta name="robots" content="noindex, nofollow" />
+        <style id="main" type="text/css">
+            html {
+                margin: 0;
+                padding: 0;
+                scroll-behavior: smooth;
+                overflow-x: hidden;
+                font-family: Helvetica, sans-serif;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+            }
+
+            .main-color,
+            b {
+                color: #dd4814;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .main-bg-color,
+            .hamburger-container,
+            footer {
+                background: #dd4814;
+            }
+
+            /* Hamburger Menu Styles */
+            .hamburger-container {
+                display: inline-block;
+                cursor: pointer;
+                padding: 15px;
+                position: fixed;
+                top: 10px;
+                right: 10px;
+                z-index: 1000;
+                border-radius: 50px;
+            }
+
+            .hamburger-line {
+                width: 30px;
+                height: 3px;
+                background-color: #fff;
+                margin: 6px 0;
+                transition: 0.4s;
+            }
+
+            /* Transformed X icon */
+            .change .line1 {
+                transform: translate(0, 9px) rotate(-45deg);
+            }
+
+            .change .line2 {
+                opacity: 0;
+            }
+
+            .change .line3 {
+                transform: translate(0, -9px) rotate(45deg);
+            }
+
+            /* Dropdown Navigation Menu */
+            #hamburger-dropdown {
+                position: fixed;
+                top: 60px;
+                right: 10px;
+                width: 200px;
+                background-color: #f8f8f8;
+                border-radius: 4px;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-20px);
+                transition:
+                    opacity 0.3s,
+                    transform 0.3s,
+                    visibility 0s 0.3s;
+                z-index: 999;
+            }
+
+            #hamburger-dropdown.open {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+                transition:
+                    opacity 0.3s,
+                    transform 0.3s;
+            }
+
+            #hamburger-dropdown ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            #hamburger-dropdown li {
+                padding: 0;
+                border-bottom: 1px solid #e0e0e0;
+            }
+
+            #hamburger-dropdown li:last-child {
+                border-bottom: none;
+            }
+
+            #hamburger-dropdown a {
+                display: block;
+                padding: 12px 20px;
+                color: #333;
+                text-decoration: none;
+                font-weight: bold;
+                transition: 0.3s;
+            }
+
+            #hamburger-dropdown a:hover {
+                background-color: #e0e0e0;
+            }
+
+            /* Section styling */
+            .neofetch {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #contact table {
+                width: clamp(200px, 30vw, 600px);
+            }
+
+            #skill td {
+                text-align: center;
+            }
+
+            #experience,
+            #project,
+            #skill,
+            #contact {
+                padding: 12vw;
+                justify-content: center;
+                align-items: center;
+                padding-top: 15px;
+            }
+
+            #skill {
+                min-height: 50vh;
+            }
+
+            table {
+                /* border-top: 1px solid black; */
+                width: 100%;
+            }
+            th {
+                border-bottom: 1px solid grey;
+            }
+
+            .project-container {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding-bottom: 55px;
+            }
+
+            .project-item {
+                display: flex;
+                flex-direction: column; /* Default: Stacked for mobile */
+                align-items: center;
+                text-align: center;
+            }
+
+            .project-img {
+                zoom: 0.5;
+                width: 640px;
+                height: 380px;
+                display: block;
+            }
+
+            /* Desktop: Show image and description side by side */
+            @media (min-width: 1350px) {
+                .project-item {
+                    flex-direction: row; /* Side-by-side layout */
+                    gap: 20px;
+                    align-items: center;
+                    text-align: left;
+                }
+
+                .project-img {
+                    zoom: 0.8;
+                }
+
+                .description {
+                    width: 50%;
+                }
+            }
+
+            /* Footer styling */
+            footer {
+                padding: 20px;
+                text-align: center;
+                color: white;
+            }
+        </style>
+
+        <style id="spritesheet" type="text/css">
+            .openinnewtab {
+                background: url("src/spritesheet.webp") 0px 0px;
+                zoom: 0.2;
+            }
+            .python {
+                background: url("src/spritesheet.webp") -128px 0px;
+            }
+            .flask {
+                background: url("src/spritesheet.webp") -256px -0px;
+            }
+            .django {
+                background: url("src/spritesheet.webp") -384px -0px;
+            }
+            .pandas {
+                background: url("src/spritesheet.webp") -512px -0px;
+            }
+            .scikitlearn {
+                background: url("src/spritesheet.webp") 0px -128px;
+            }
+            .jupyternotebook {
+                background: url("src/spritesheet.webp") -128px -128px;
+            }
+            .pygame {
+                background: url("src/spritesheet.webp") -256px -128px;
+            }
+            .javascript {
+                background: url("src/spritesheet.webp") -384px -128px;
+            }
+            .vue {
+                background: url("src/spritesheet.webp") -512px -128px;
+            }
+            .go {
+                background: url("src/spritesheet.webp") 0px -256px;
+            }
+            .r {
+                background: url("src/spritesheet.webp") -128px -256px;
+            }
+            .linux {
+                background: url("src/spritesheet.webp") -256px -256px;
+            }
+            .ubuntu {
+                background: url("src/spritesheet.webp") -384px -256px;
+            }
+            .linuxmint {
+                background: url("src/spritesheet.webp") -512px -256px;
+            }
+            .docker {
+                background: url("src/spritesheet.webp") -0px -384px;
+            }
+            .git {
+                background: url("src/spritesheet.webp") -128px -384px;
+            }
+            .aws {
+                background: url("src/spritesheet.webp") -256px -384px;
+            }
+            .pythonanywhere {
+                background: url("src/spritesheet.webp") -384px -384px;
+            }
+            .postgres {
+                background: url("src/spritesheet.webp") -512px -384px;
+            }
+            .mysql {
+                background: url("src/spritesheet.webp") -0px -512px;
+            }
+            .sqlite {
+                background: url("src/spritesheet.webp") -128px -512px;
+            }
+            .linkedin {
+                background: url("src/spritesheet.webp") -256px -512px;
+            }
+            .email {
+                background: url("src/spritesheet.webp") -384px -512px;
+            }
+            .line {
+                background: url("src/spritesheet.webp") -512px -512px;
+            }
+            .line:hover {
+                cursor: pointer;
+            }
+            .stackoverflow {
+                background: url("src/spritesheet.webp") 0px -640px;
+            }
+            .github {
+                background: url("src/spritesheet.webp") -128px -640px;
+            }
+            .dino {
+                background: url("src/spritesheet.webp") -256px -640px;
+            }
+            .migrate_job {
+                background: url("src/spritesheet.webp") 0px -1152px;
+            }
+            .fair_job {
+                background: url("src/spritesheet.webp") 0px -768px;
+            }
+            .moving_average_job {
+                background: url("src/spritesheet.webp") 0px -1532px;
+            }
+            .quotation_job {
+                background: url("src/spritesheet.webp") 0px -1916px;
+            }
+            .psplaces_job {
+                background: url("src/spritesheet.webp") 0px -2296px;
+            }
+            .rpgmakerclone {
+                background: url("src/spritesheet.webp") 0px -3436px;
+            }
+            .github_analysis {
+                background: url("src/spritesheet.webp") 0px -3070px;
+            }
+            .ecommerce {
+                background: url("src/spritesheet.webp") 0px -2676px;
+            }
+        </style>
+        <style id="skillset" type="text/css">
+            .sprite {
+                width: 128px;
+                height: 128px;
+                display: block;
+                -webkit-filter: drop-shadow(5px 5px 5px #222);
+                filter: drop-shadow(5px 5px 5px #222);
+            }
+
+            .sprite::after {
+                content: attr(
+                    data-tooltip
+                ); /* Uses the custom attribute for the tooltip */
+                position: absolute;
+                bottom: 100%; /* Position above the sprite */
+                left: 50%;
+                transform: translateX(-50%);
+                background-color: black;
+                color: white;
+                padding: 5px 8px;
+                border-radius: 5px;
+                font-size: 3rem;
+                white-space: nowrap;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 1s ease-in-out;
+            }
+
+            .sprite:hover::after {
+                opacity: 1;
+                visibility: visible;
+                transition: opacity 0.2s ease-in-out;
+            }
+
+            .skills-grid {
+                margin-top: 45px;
+                display: grid;
+                gap: 2rem;
+                width: 100%;
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .skills-item {
+                width: 100%;
+            }
+
+            .skill-icon {
+                zoom: 0.4;
+            }
+
+            @media only screen and (max-width: 600px) {
+                .skill-icon {
+                    zoom: 0.2;
+                    margin: 0 auto;
+                }
+
+                .skills-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+        <style id="neofetch" type="text/css">
+            .spin-ubuntu-icon {
+                width: clamp(120px, 10vw, 1000px);
+                height: clamp(120px, 10vw, 1000px);
+                background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 32 32' preserveAspectRatio='xMidYMid'%3E%3Cpath d='M32 16c0 8.836-7.164 16-16 16S0 24.836 0 16 7.164 0 16 0s16 7.164 16 16z' fill='%23dd4814'/%3E%3Cpath d='M5.12 13.864c-1.18 0-2.137.956-2.137 2.137s.956 2.136 2.137 2.136S7.257 17.18 7.257 16 6.3 13.864 5.12 13.864zm15.252 9.71c-1.022.6-1.372 1.896-.782 2.917s1.895 1.372 2.917.782 1.372-1.895.782-2.917-1.896-1.37-2.917-.782zM9.76 16a6.23 6.23 0 0 1 2.653-5.105L10.852 8.28a9.3 9.3 0 0 0-3.838 5.394C7.69 14.224 8.12 15.06 8.12 16s-.432 1.776-1.106 2.326c.577 2.237 1.968 4.146 3.838 5.395l1.562-2.616A6.23 6.23 0 0 1 9.761 16zM16 9.76a6.24 6.24 0 0 1 6.215 5.687l3.044-.045a9.25 9.25 0 0 0-2.757-6.019c-.812.307-1.75.26-2.56-.208a2.99 2.99 0 0 1-1.461-2.118C17.7 6.84 16.86 6.72 16 6.72c-1.477 0-2.873.347-4.113.96l1.484 2.66c.8-.372 1.69-.58 2.628-.58zm0 12.48c-.94 0-1.83-.21-2.628-.58l-1.484 2.66c1.24.614 2.636.96 4.113.96a9.28 9.28 0 0 0 2.479-.338c.14-.858.65-1.648 1.46-2.118s1.75-.514 2.56-.207a9.25 9.25 0 0 0 2.757-6.019l-3.045-.045A6.24 6.24 0 0 1 16 22.24zm4.372-13.813c1.022.6 2.328.24 2.917-.78s.24-2.328-.78-2.918-2.328-.24-2.918.783-.24 2.327.782 2.917z' fill='%23fff'/%3E%3C/svg%3E");
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center;
+                animation: spin 2.5s ease-in-out infinite;
+                overflow: hidden;
+                border-radius: 50%;
+                border: #dd4814 1px solid;
+            }
+
+            @keyframes spin {
+                from {
+                    transform: rotate(0deg);
+                }
+                to {
+                    transform: rotate(360deg);
+                }
+            }
+
+            .neofetch ul {
+                list-style-type: none;
+            }
+
+            .terminal-colors {
+                display: grid;
+                grid-template-columns: repeat(8, 25px);
+                grid-template-rows: repeat(2, 15px);
+                gap: 0;
+                width: fit-content;
+                margin-top: 25px;
+            }
+
+            .color-block {
+                height: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <header>
+                <div class="hamburger-container" onclick="toggleMenu()">
+                    <div class="hamburger-line line1"></div>
+                    <div class="hamburger-line line2"></div>
+                    <div class="hamburger-line line3"></div>
+                </div>
+                <nav id="hamburger-dropdown">
+                    <ul>
+                        <li>
+                            <a href="#" onclick="toggleMenu()">TOP</a>
+                        </li>
+                        <li>
+                            <a href="#experience" onclick="toggleMenu()"
+                                >EXPERIENCE</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#skill" onclick="toggleMenu()">SKILL</a>
+                        </li>
+                        <li>
+                            <a href="#project" onclick="toggleMenu()"
+                                >PROJECT</a
+                            >
+                        </li>
+                        <li>
+                            <a href="#contact" onclick="toggleMenu()"
+                                >CONTACT</a
+                            >
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <main>
+            <div>
+                <div class="neofetch">
+                    <img class="spin-ubuntu-icon" />
+                    <ul>
+                        <li>
+                            <h1>
+                                Hello, I'm
+                                <span class="main-color">Mark</span
+                                >.<br />Welcome<br />to my
+                                <span class="main-color">portfolio</span>
+                            </h1>
+                        </li>
+                        <li><b>kritserv @ pc</b></li>
+                        <li>
+                            <hr style="border: 1px dashed #999" />
+                        </li>
+                        <li><b>OS:</b> Ubuntu 20.04 LTS x86_64</li>
+                        <li><b>Host:</b> Github Pages</li>
+                        <li><b>Name:</b> Krittipoom Phalachun</li>
+                        <li><b>Uptime:</b> 23 years</li>
+                        <li><b>Experience:</b> 1 year</li>
+                        <li><b>Bachelor:</b> Data Science</li>
+                        <li><b>GPA:</b> 3.61</li>
+                        <li>
+                            <div class="terminal-colors">
+                                <div
+                                    class="color-block"
+                                    style="background-color: #000000"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #cd0000"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #00cd00"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #cdcd00"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #0000ee"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #cd00cd"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #00cdcd"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #e5e5e5"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #7f7f7f"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #ff0000"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #00ff00"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #ffff00"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #5c5cff"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #ff00ff"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #00ffff"
+                                ></div>
+                                <div
+                                    class="color-block"
+                                    style="background-color: #ffffff"
+                                ></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div id="experience">
+                    <h1 class="main-color">EXPERIENCE</h1>
+
+                    <h3>Python Programmer</h3>
+                    <h4>
+                        บริษัท เอ็ม.ดี.ซอฟต์ จำกัด - M.D.Soft Co.,Ltd. (May 2024
+                        - Feb 2025)
+                    </h4>
+
+                    <h3>Backend Developer (Internship)</h3>
+                    <h4>
+                        บริษัท อมรินทร์ คอร์เปอเรชั่นส์ จำกัด (มหาชน) - Amarin
+                        (July 2023 - Oct 2023)
+                    </h4>
+                    <br />
+                    <br />
+                    <h1 class="main-color">Awards</h1>
+                    <h3>Highest GPA in Data Science (2021)</h3>
+                    <p>Awarded a certificate for academic excellence.</p>
+                    <h3>
+                        AJCC Conference 2023 (Tier 2 Award in Journal
+                        Classification)
+                    </h3>
+                    <p>
+                        Our team of three developed a research project
+                        distinguishing real human voices from AI-generated
+                        voices using MFCC and CNN.
+                    </p>
+
+                    <a
+                        href="https://ph01.tci-thaijo.org/index.php/KKUSciJ/article/view/252903"
+                        target="_blank"
+                        ><i
+                            class="sprite openinnewtab"
+                            data-tooltip="Open in new tab"
+                        ></i
+                    ></a>
+                </div>
+                <div id="skill">
+                    <h1>SKILL</h1>
+                    <h3 class="main-color">
+                        Preferred languages and framework
+                    </h3>
+                    <table
+                        style="
+                            padding-bottom: 20px;
+                            border-bottom: 1px solid grey;
+                        "
+                    >
+                        <tbody>
+                            <tr>
+                                <th scope="row">Language</th>
+                                <th scope="row">Framework</th>
+                                <th scope="row">Usage</th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i
+                                        class="sprite main-skill-icon skill-icon python"
+                                        data-tooltip="Python"
+                                    ></i>
+                                </td>
+                                <td>
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <i
+                                                        class="sprite skill-icon flask"
+                                                        data-tooltip="Flask"
+                                                    ></i>
+                                                </td>
+                                                <td>
+                                                    <i
+                                                        class="sprite skill-icon django"
+                                                        data-tooltip="Django"
+                                                    ></i>
+                                                </td>
+                                                <td>
+                                                    <i
+                                                        class="sprite skill-icon pandas"
+                                                        data-tooltip="Pandas"
+                                                    ></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <i
+                                                        class="sprite skill-icon scikitlearn"
+                                                        data-tooltip="Sci-kit learn"
+                                                    ></i>
+                                                </td>
+                                                <td>
+                                                    <i
+                                                        class="sprite skill-icon jupyternotebook"
+                                                        data-tooltip="Jupyter Notebook"
+                                                    ></i>
+                                                </td>
+                                                <td>
+                                                    <i
+                                                        class="sprite skill-icon pygame"
+                                                        data-tooltip="Pygame"
+                                                    ></i>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td>
+                                    Backend, Data analysis, Data transformation,
+                                    Data migration, Machine learning, Game
+                                    development
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <i
+                                        class="sprite skill-icon javascript"
+                                        data-tooltip="Javascript"
+                                    ></i>
+                                </td>
+                                <td>
+                                    <i
+                                        class="sprite skill-icon vue"
+                                        data-tooltip="Vue"
+                                    ></i>
+                                </td>
+                                <td>Frontend</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="skills-grid">
+                        <div class="skills-item">
+                            <h3>Other Known Languages</h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Language</th>
+                                        <th scope="row">Usage</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon go"
+                                                data-tooltip="Go"
+                                            ></i>
+                                        </td>
+                                        <td>Backend</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon r"
+                                                data-tooltip="R"
+                                            ></i>
+                                        </td>
+                                        <td>Data analysis</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon linux"
+                                                data-tooltip="Bash"
+                                            ></i>
+                                        </td>
+                                        <td>Automation</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="skills-item">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Linux Distribution</th>
+                                        <th scope="row">Usage</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon ubuntu"
+                                                data-tooltip="Ubuntu"
+                                            ></i>
+                                        </td>
+                                        <td>
+                                            Server, docker container, github
+                                            action
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon linuxmint"
+                                                data-tooltip="Linux Mint"
+                                            ></i>
+                                        </td>
+                                        <td>Daily Driver</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="skills-item">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Other Tools</th>
+                                        <th scope="row">Usage</th>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon docker"
+                                                data-tooltip="Docker"
+                                            ></i>
+                                        </td>
+                                        <td>
+                                            Build, share and run web application
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon git"
+                                                data-tooltip="Git"
+                                            ></i>
+                                        </td>
+                                        <td>
+                                            Version control, open-source and
+                                            contribution
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <table>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <i
+                                                                class="sprite skill-icon aws"
+                                                                data-tooltip="AWS"
+                                                            ></i>
+                                                        </td>
+                                                        <td>
+                                                            <i
+                                                                class="sprite skill-icon pythonanywhere"
+                                                                data-tooltip="Pythonanywhere"
+                                                            ></i>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                        <td>Deploy web application</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="skills-item">
+                            <h3 style="border-bottom: 1px solid grey">
+                                Database
+                            </h3>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon postgres"
+                                                data-tooltip="Postgres"
+                                            ></i>
+                                        </td>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon mysql"
+                                                data-tooltip="MySQL"
+                                            ></i>
+                                        </td>
+                                        <td>
+                                            <i
+                                                class="sprite skill-icon sqlite"
+                                                data-tooltip="SQLite"
+                                            ></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div id="project">
+                    <h1 class="main-color">PROJECT</h1>
+                    <div class="project-container">
+                        <div class="project-item">
+                            <i class="project-img migrate_job"></i>
+                            <div class="description">
+                                <h2>Migrate data to Odoo</h2>
+                                <p>
+                                    Developed a web application to migrate
+                                    client data from Excel to an Odoo PostgreSQL
+                                    server using Django, Pandas, SQL, and
+                                    XMLRPC.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <i class="project-img moving_average_job"></i>
+                            <div class="description">
+                                <h2>Stock report in Odoo</h2>
+                                <p>
+                                    Built an Odoo module for stock moving
+                                    average and stock aging reports.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <i class="project-img quotation_job"></i>
+                            <div class="description">
+                                <h2>Odoo Quotation Multi Template</h2>
+                                <p>
+                                    Created an Odoo module to generate
+                                    quotations in multiple formats
+                                </p>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <i class="project-img fair_job"></i>
+                            <div class="description">
+                                <h2>Django exhibition dashboard</h2>
+                                <p>
+                                    Developed a dashboard to visualize
+                                    exhibition visitors' locations using Django,
+                                    Pillow, Docker, and PostgreSQL.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="project-item">
+                            <i class="project-img psplaces_job"></i>
+                            <div class="description">
+                                <h2>psplaces.com</h2>
+                                <p>
+                                    A dormitory website deploy on AWS S3 and
+                                    Cloudfront
+                                </p>
+                                <a href="https://psplaces.com/" target="_blank"
+                                    ><i
+                                        class="sprite openinnewtab"
+                                        data-tooltip="Open in new tab"
+                                    ></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h1 class="main-color">PERSONAL PROJECT</h1>
+                    <div class="project-container">
+                        <div class="project-item">
+                            <i class="project-img rpgmakerclone"></i>
+                            <div class="description">
+                                <h2>RPPYG Maker</h2>
+                                <p>
+                                    A web application/game engine, An
+                                    alternative to RPG Maker, using Pygame and
+                                    Flask. Can be export to desktop, android and
+                                    browser
+                                </p>
+                                <a
+                                    href="https://github.com/kritserv/rpg-maker-clone"
+                                    target="_blank"
+                                    ><i
+                                        class="sprite openinnewtab"
+                                        data-tooltip="Open in new tab"
+                                    ></i
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <i class="project-img github_analysis"></i>
+                            <div class="description">
+                                <h2>
+                                    Analysis of GitHub Usage of Python Developer
+                                </h2>
+                                <p>
+                                    Analyze the GitHub usage behavior of Python
+                                    developers with a high number of followers
+                                    by web scraping and GitHub REST API
+                                </p>
+                                <a
+                                    href="https://github.com/kritserv/analyze-how-python-developer-use-github"
+                                    target="_blank"
+                                    ><i
+                                        class="sprite openinnewtab"
+                                        data-tooltip="Open in new tab"
+                                    ></i
+                                ></a>
+                            </div>
+                        </div>
+                        <div class="project-item">
+                            <i class="project-img ecommerce"></i>
+                            <div class="description">
+                                <h2>Django Mock up E commerce</h2>
+                                <p>
+                                    E commerce Mock up website build with
+                                    Django, SQlite and Docker. include product
+                                    filtering, cart management, and checkout
+                                    functionality.
+                                </p>
+                                <a
+                                    href="https://github.com/kritserv/django_online_store"
+                                    target="_blank"
+                                    ><i
+                                        class="sprite openinnewtab"
+                                        data-tooltip="Open in new tab"
+                                    ></i
+                                ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="contact">
+                    <h1 style="margin-right: 25px">CONTACT</h1>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a
+                                        href="https://github.com/kritserv"
+                                        target="_blank"
+                                    >
+                                        <i
+                                            class="sprite skill-icon github"
+                                            data-tooltip="Open in new tab"
+                                        ></i
+                                    ></a>
+                                </td>
+                                <td>
+                                    <a
+                                        href="https://github.com/kritserv"
+                                        target="_blank"
+                                        >kritserv</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a
+                                        href="https://www.linkedin.com/in/krittipoom2001"
+                                        target="_blank"
+                                    >
+                                        <i
+                                            class="sprite skill-icon linkedin"
+                                            data-tooltip="Open in new tab"
+                                        ></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <a
+                                        href="https://www.linkedin.com/in/krittipoom2001"
+                                        target="_blank"
+                                        >Krittipoom Phalachun</a
+                                    >
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="mailto:krit.serv@gmail.com">
+                                        <i
+                                            class="sprite skill-icon email"
+                                            data-tooltip="Send email"
+                                        ></i
+                                    ></a>
+                                </td>
+                                <td>kritserv[at]gmail.com</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a onclick="copyFunction()">
+                                        <i
+                                            class="sprite skill-icon line"
+                                            data-tooltip="Copy LINE id"
+                                        ></i>
+                                    </a>
+                                </td>
+                                <td>
+                                    <input
+                                        type="text"
+                                        value="qwermark111"
+                                        id="lineInput"
+                                        hidden
+                                    />qwermark111
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a
+                                        href="https://stackoverflow.com/users/21557915/kritserv"
+                                        target="_blank"
+                                    >
+                                        <i
+                                            class="sprite skill-icon stackoverflow"
+                                            data-tooltip="Open in new tab"
+                                        ></i
+                                    ></a>
+                                </td>
+                                <td>
+                                    <a
+                                        href="https://stackoverflow.com/users/21557915/kritserv"
+                                        target="_blank"
+                                        >kritserv</a
+                                    >
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <a style="color: white" href="#"><h1>^</h1> </a>
+            </div>
+            <div>
+                <p>©︎ kritserv</p>
+            </div>
+        </footer>
+        <script>
+            function toggleMenu() {
+                const hamburger = document.querySelector(
+                    ".hamburger-container",
+                );
+                const nav = document.getElementById("hamburger-dropdown");
+
+                hamburger.classList.toggle("change");
+                nav.classList.toggle("open");
+            }
+
+            // Close menu when clicking on a link or outside
+            document.addEventListener("click", function (event) {
+                const hamburger = document.querySelector(
+                    ".hamburger-container",
+                );
+                const nav = document.getElementById("hamburger-dropdown");
+
+                // If click is not on menu or hamburger, close the menu
+                if (
+                    !nav.contains(event.target) &&
+                    !hamburger.contains(event.target)
+                ) {
+                    nav.classList.remove("open");
+                    hamburger.classList.remove("change");
+                }
+            });
+
+            function copyFunction() {
+                var copyText = document.getElementById("lineInput");
+
+                // Select the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+
+                // Copy the text inside the text field
+                navigator.clipboard.writeText(copyText.value);
+
+                // Alert the copied text
+                alert("Copied: " + copyText.value);
+            }
+        </script>
+    </body>
+</html>

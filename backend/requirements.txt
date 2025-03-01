@@ -1,5 +1,0 @@
-flask
-flask_httpauth
-Flask-Limiter
-Flask-Limiter[memcached]
-Flask-Cors
