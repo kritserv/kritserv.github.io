@@ -139,8 +139,22 @@
                 align-items: center;
             }
 
-            #contact table {
-                width: clamp(200px, 30vw, 600px);
+            #contact {
+                padding: 12vw;
+                text-align: center;
+            }
+
+            #contact div {
+                display: flex;
+                margin-bottom: 70px;
+                margin-top: 70px;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+            }
+
+            #contact div a {
+                margin-right: clamp(5px, 5vw, 25px);
             }
 
             #skill td {
@@ -149,8 +163,7 @@
 
             #experience,
             #project,
-            #skill,
-            #contact {
+            #skill {
                 padding: 12vw;
                 justify-content: center;
                 align-items: center;
@@ -980,101 +993,50 @@
                 </div>
                 <div id="contact">
                     <h1 style="margin-right: 25px">CONTACT</h1>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>
-                                    <a
-                                        href="https://github.com/kritserv"
-                                        target="_blank"
-                                    >
-                                        <i
-                                            class="sprite skill-icon github"
-                                            data-tooltip="Open in new tab"
-                                        ></i
-                                    ></a>
-                                </td>
-                                <td>
-                                    <a
-                                        href="https://github.com/kritserv"
-                                        target="_blank"
-                                        >kritserv</a
-                                    >
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a
-                                        href="https://www.linkedin.com/in/krittipoom2001"
-                                        target="_blank"
-                                    >
-                                        <i
-                                            class="sprite skill-icon linkedin"
-                                            data-tooltip="Open in new tab"
-                                        ></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <a
-                                        href="https://www.linkedin.com/in/krittipoom2001"
-                                        target="_blank"
-                                        >Krittipoom Phalachun</a
-                                    >
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a href="mailto:krit.serv@gmail.com">
-                                        <i
-                                            class="sprite skill-icon email"
-                                            data-tooltip="Send email"
-                                        ></i
-                                    ></a>
-                                </td>
-                                <td>kritserv[at]gmail.com</td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a onclick="copyFunction()">
-                                        <i
-                                            class="sprite skill-icon line"
-                                            data-tooltip="Copy LINE id"
-                                        ></i>
-                                    </a>
-                                </td>
-                                <td>
-                                    <input
-                                        type="text"
-                                        value="qwermark111"
-                                        id="lineInput"
-                                        hidden
-                                    />qwermark111
-                                </td>
-                                <td></td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <a
-                                        href="https://stackoverflow.com/users/21557915/kritserv"
-                                        target="_blank"
-                                    >
-                                        <i
-                                            class="sprite skill-icon stackoverflow"
-                                            data-tooltip="Open in new tab"
-                                        ></i
-                                    ></a>
-                                </td>
-                                <td>
-                                    <a
-                                        href="https://stackoverflow.com/users/21557915/kritserv"
-                                        target="_blank"
-                                        >kritserv</a
-                                    >
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div>
+                        <a href="https://github.com/kritserv" target="_blank">
+                            <i
+                                class="sprite skill-icon github"
+                                data-tooltip="Open in new tab"
+                            ></i
+                        ></a>
+                        <a
+                            href="https://www.linkedin.com/in/krittipoom2001"
+                            target="_blank"
+                        >
+                            <i
+                                class="sprite skill-icon linkedin"
+                                data-tooltip="Open in new tab"
+                            ></i>
+                        </a>
+                        <a href="mailto:krit.serv@gmail.com">
+                            <i
+                                class="sprite skill-icon email"
+                                data-tooltip="Send email"
+                            ></i
+                        ></a>
+                        <input
+                            type="text"
+                            value="qwermark111"
+                            id="lineInput"
+                            hidden
+                        />
+                        <a onclick="copyFunction()">
+                            <i
+                                class="sprite skill-icon line"
+                                data-tooltip="Copy LINE id"
+                            ></i>
+                        </a>
+                        <a
+                            href="https://stackoverflow.com/users/21557915/kritserv"
+                            target="_blank"
+                        >
+                            <i
+                                class="sprite skill-icon stackoverflow"
+                                data-tooltip="Open in new tab"
+                            ></i
+                        ></a>
+                    </div>
                 </div>
             </div>
         </main>
